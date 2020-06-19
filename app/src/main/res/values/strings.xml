@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Change Money</string>
+    <string name="moneda_origen">Moneda Origen</string>
+    <string name="moneda_destino">Moneda Destino</string>
+    <string name="cantidad_origen">Cantidad</string>
+    <string name="convertir">CONVERTIR</string>
+
+    <string-array name="lista_monedas">
+        <item>peso colombiano</item>
+        <item>dólar estadounidense</item>
+        <item>euro</item>
+        <item>yen</item>
+    </string-array>
+</resources>
