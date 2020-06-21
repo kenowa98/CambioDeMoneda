@@ -10,7 +10,7 @@ import android.widget.ImageView
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import java.math.MathContext
+import java.math.RoundingMode
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
@@ -81,7 +81,8 @@ class MainActivity : AppCompatActivity() {
             if (cantidad.isEmpty()) {
                 tv_cantidad_final.text = "Ingrese la cantidad a convertir"
             } else {
-                val final = convert(pos1, pos2, cantidad.toDouble()).toBigDecimal(mathContext = MathContext.DECIMAL32).toString()
+                val final = convert(pos1, pos2, cantidad.toDouble()).toBigDecimal()
+                    .setScale(2, RoundingMode.HALF_EVEN).toString()
                 when (pos2) {
                     0 -> {
                         tv_cantidad_final.text = "$final COP"
